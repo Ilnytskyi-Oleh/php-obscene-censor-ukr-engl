@@ -1,15 +1,20 @@
 {
-  "name": "vearutop/php-obscene-censor-rus",
+  "name": "Ilnytskyi-Oleh/php-obscene-censor-ukr-engl",
   "type": "library",
-  "description": "Класс для фильтрации нецензурных выражений (матов).",
-  "keywords": ["censor", "антимат", "цензура", "хуй", "модерация"],
-  "homepage": "https://github.com/vearutop/php-obscene-censor-rus/",
+  "description": "Class for filtering obscene expressions (profanity).",
+  "keywords": ["censor", "profanity filter", "censorship", "****", "moderation"],
+  "homepage": "https://github.com/Ilnytskyi-Oleh/php-obscene-censor-ukr-engl/",
   "license": "MIT",
   "authors": [
     {
       "name": "Viacheslav Poturaev",
       "email": "vearutop@gmail.com",
       "homepage": "https://github.com/vearutop"
+    },
+    {
+      "name": "Oleh Ilnytskyi",
+      "email": "ilnytskyy67922@gmail.com",
+      "homepage": "https://github.com/Ilnytskyi-Oleh"
     }
   ],
   "require": {
