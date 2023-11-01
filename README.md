@@ -1,52 +1,35 @@
 php-obscene-censor-rus
 ======================
-[![Build Status](https://travis-ci.org/vearutop/php-obscene-censor-rus.png?branch=master)](https://travis-ci.org/vearutop/php-obscene-censor-rus) [![Total Downloads](https://poser.pugx.org/vearutop/php-obscene-censor-rus/downloads)](https://packagist.org/packages/vearutop/php-obscene-censor-rus)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvearutop%2Fphp-obscene-censor-rus.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvearutop%2Fphp-obscene-censor-rus?ref=badge_shield)
+Class for filtering obscene expressions (profanity).
 
-Класс для фильтрации нецензурных выражений (матов).
+Analysis based on regular expressions with an exclusion list, compatible with UTF8.
 
-Анализ на основе регулярных выражений с списком исключений, совместим с UTF8.
-
-Использование:
-
+Usage:
 ```php
-$text = 'Да пошел ты нахуй и в пиzdu huesos, ушлепок ебаный, ебать мой вялый хуй!
-Мой дед ветеран твоего деда педрилу ебал :( Хуячечки';
+$text = 'Get the **** out and **** off, you ******* idiot, **** my limp ****!
+My granddad is a veteran, and your granddad can **** off too :( **** ****!';
 
 ObsceneCensorRus::filterText($text);
 
 echo $text;
-//Да пошел ты ***** и в ***** ******, ушлепок ******, ***** мой вялый ***!
-//Мой дед ветеран твоего деда ******* **** :( ********
-```
+//Get the **** out and **** off, you ******* idiot, **** my limp ****!
+//My granddad is a veteran, and your granddad can **** off too :( **** ****!
 
-```php
 $text = ObsceneCensorRus::getFiltered($text);
-```
 
-```php
 var_dump(ObsceneCensorRus::isAllowed($text));
 // false
 ```
-
-Вторым параметром можно указать кодировку если она отличается от UTF8
+You can specify the character encoding as the second parameter if it differs from UTF8:
 ```php
-ObsceneCensorRus::getFiltered('кто прочитает тот лол', 'CP1251')
+ObsceneCensorRus::getFiltered('Who will read this, LOL', 'CP1251');
 ```
-
-Установка:
-```
+Installation:
+```php
 composer require vearutop/php-obscene-censor-rus
 ```
-
-Тесты:
-```
+Tests:
+```php
 php phpunit.phar ./tests
 ```
-
-
-Цензура, антимат, матерщинные слова, фильтр мата, обсценная лексика, нецензурная брань, треугольные сиськи.
-
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvearutop%2Fphp-obscene-censor-rus.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvearutop%2Fphp-obscene-censor-rus?ref=badge_large)
+Censorship, anti-mat, profanity words, profanity filter, obscene language, vulgar abuse, triangular breasts.
